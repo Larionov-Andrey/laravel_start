@@ -122,8 +122,8 @@ return [
         'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
-    
-    'providers' => ServiceProvider::defaultProviders()->merge([
+
+    'providers' => App\Providers\AppServiceProvider::defaultProviders()->merge([
         Barryvdh\Debugbar\ServiceProvider::class,
     ])->toArray(),
 
